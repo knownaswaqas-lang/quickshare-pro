@@ -27,9 +27,8 @@
       </div>
     </div>
 
-    <div id="typingStatus" class="typing-status"></div>
-
     <div id="messages" class="messages"></div>
+    <div id="activityStatus" class="activity-status hidden"></div>
 
     <div id="replyPreview" class="reply-preview hidden">
       <div class="reply-preview-main">
@@ -40,6 +39,14 @@
     </div>
     <div class="chat-input-wrapper">
       <button id="floatingReplyBtn" type="button" class="floating-reply-btn hidden">Reply</button>
+      <div id="voiceComposer" class="voice-composer hidden">
+        <button id="voiceDeleteBtn" type="button" class="voice-action">🗑</button>
+        <span id="voiceDot" class="voice-dot"></span>
+        <span id="voiceTimer" class="voice-timer">0:00</span>
+        <div id="voiceWave" class="voice-wave"></div>
+        <button id="voicePauseBtn" type="button" class="voice-action">⏸</button>
+        <button id="voiceSendBtn" type="button" class="voice-send">➤</button>
+      </div>
       <div class="emoji-wrap">
         <button id="emojiBtn" type="button" class="inside-btn" aria-label="Emoji">😊</button>
         <div id="emojiPanel" class="emoji-panel hidden"></div>
@@ -66,12 +73,12 @@
 
       <div id="previewBody" class="preview-body"></div>
 
-      <div class="preview-actions">
-        <button id="previewCropBtn" type="button" class="preview-btn">Crop</button>
-        <button id="previewDrawBtn" type="button" class="preview-btn">Pencil</button>
-        <button id="previewResetBtn" type="button" class="preview-btn">Reset</button>
-        <button id="previewCancelBtn" type="button" class="preview-btn">Cancel</button>
-        <button id="previewSendBtn" type="button" class="preview-btn preview-send">Send</button>
+      <div class="preview-actions preview-overlay-actions">
+        <button id="previewCropBtn" type="button" class="preview-btn icon-btn" title="Crop">✂</button>
+        <button id="previewDrawBtn" type="button" class="preview-btn icon-btn" title="Draw">✎</button>
+        <button id="previewResetBtn" type="button" class="preview-btn icon-btn" title="Reset">↺</button>
+        <button id="previewCancelBtn" type="button" class="preview-btn icon-btn" title="Cancel">✕</button>
+        <button id="previewSendBtn" type="button" class="preview-btn preview-send icon-btn" title="Send">➤</button>
       </div>
     </div>
   </div>
