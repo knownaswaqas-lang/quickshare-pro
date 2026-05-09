@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickShare Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home-body">
+  <div class="home-bg"></div>
+
+  <main class="center-box">
+    <h1 id="homeTitle">QuickShare Pro</h1>
+
+    <div class="input-group">
+      <input id="nameInput" type="text" placeholder="Your Name" maxlength="32" autocomplete="off" />
+      <input id="roomInput" type="text" placeholder="Room Code" maxlength="12" autocomplete="off" />
+    </div>
+
+    <div class="button-group">
+      <button id="createRoomBtn" type="button" class="main-btn create-btn">Create Room</button>
+      <button id="joinRoomBtn" type="button" class="main-btn join-btn">Join Room</button>
+    </div>
+
+    <div class="bottom-text">FAST • SECURE • REAL TIME</div>
+  </main>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

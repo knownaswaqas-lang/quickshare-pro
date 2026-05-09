@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickShare Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="room-info">
+        <div class="room-share">
+          <div id="roomQrBox" class="room-qr"></div>
+          <div id="roomQrText" class="room-qr-text">Scan to join</div>
+        </div>
+        <div id="roomTitle" class="room-title">Room code:</div>
+        <div class="brand-badge">QuickShare Pro</div>
+      </div>
+
+      <div class="header-actions">
+        <div id="onlineCount" class="online-count">Online: 1</div>
+        <button id="copyRoomBtn" type="button" class="top-btn">Copy Room</button>
+        <button id="clearChatBtn" type="button" class="top-btn">Clear Chat</button>
+        <button id="leaveBtn" type="button" class="top-btn danger">Leave</button>
+      </div>
+    </div>
+
+    <div id="typingStatus" class="typing-status"></div>
+
+    <div id="messages" class="messages"></div>
+
+    <div id="replyPreview" class="reply-preview hidden">
+      <div class="reply-preview-main">
+        <div class="reply-preview-label">Replying to <span id="replyPreviewName"></span></div>
+        <div id="replyPreviewText" class="reply-preview-text"></div>
+      </div>
+      <button id="cancelReplyBtn" type="button" class="reply-cancel">×</button>
+    </div>
+    <div class="chat-input-wrapper">
+      <button id="floatingReplyBtn" type="button" class="floating-reply-btn hidden">Reply</button>
+      <div class="emoji-wrap">
+        <button id="emojiBtn" type="button" class="inside-btn" aria-label="Emoji">😊</button>
+        <div id="emojiPanel" class="emoji-panel hidden"></div>
+      </div>
+
+      <div class="message-bar">
+        <button id="fileBtn" type="button" class="inside-btn" aria-label="Attach file">📎</button>
+        <input id="messageInput" type="text" placeholder="Type message..." autocomplete="off" />
+        <button id="micBtn" type="button" class="inside-btn" aria-label="Voice">🎤</button>
+      </div>
+
+      <button id="sendBtn" type="button" class="send-btn">➤</button>
+    </div>
+  </div>
+
+  <input type="file" id="fileInput" hidden />
+
+  <div id="filePreviewModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div id="previewTitle" class="preview-title">Preview</div>
+        <button id="previewCloseBtn" type="button" class="modal-close">×</button>
+      </div>
+
+      <div id="previewBody" class="preview-body"></div>
+
+      <div class="preview-actions">
+        <button id="previewCropBtn" type="button" class="preview-btn">Crop</button>
+        <button id="previewDrawBtn" type="button" class="preview-btn">Pencil</button>
+        <button id="previewResetBtn" type="button" class="preview-btn">Reset</button>
+        <button id="previewCancelBtn" type="button" class="preview-btn">Cancel</button>
+        <button id="previewSendBtn" type="button" class="preview-btn preview-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
